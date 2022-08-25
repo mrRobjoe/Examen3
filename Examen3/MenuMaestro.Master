@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MenuMaestro.master.cs" Inherits="Examen3.MenuMaestro" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>MenuMaestro</title>
+    <link href="Css/MenuMaestro.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <h1 style="text-align:center">Control inventario</h1>
+
+        <div class="user">
+            Bienvenido(a) <asp:Label ID="lUser" runat="server"></asp:Label>
+            <br />
+            <asp:Button CssClass="button-LogOut" ID="bLogOut" runat="server" Text="Cerrar sesión" OnClick="bLogOut_Click" />
+        </div>
+
+        <ul>
+            <li><a class="active" href="Inicio.aspx">Inicio</a></li>
+            <li><a href="ArticulosCat.aspx">Artículos</a></li>
+            <li><a href="UsuariosCat.aspx">Usuarios</a></li>
+            <li><a href="TipoArtiCat.aspx">Tipo artículo</a></li>
+            <li><a href="ReporteArti.aspx">Reporte</a></li>
+            <li><a href="Auditoria.aspx">Auditoria</a></li>
+        </ul>
+
+        <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
